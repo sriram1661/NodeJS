@@ -16,9 +16,9 @@ module.exports = {
   }],
   deploy : {
     production : {
-      "key"  : "/home/user/gti_key.pub",
+      "key"  : "/home/user/gti_key",
       "user" : "user",
-      "host" : ["192.168.248.141"],
+      "host" : ["127.0.0.1"],
       "path" : "/home/user/PM2/deploy",
       "ref"  : "origin/main",
       "repo" : "git@github.com:sriram1661/NodeJS.git",
