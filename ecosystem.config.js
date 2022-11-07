@@ -9,6 +9,7 @@ module.exports = {
 
   deploy : {
     production : {
+      key : "/home/user/gti_key",
       user : 'user',
       host : '192.168.248.141',
       ref  : 'origin/main',
