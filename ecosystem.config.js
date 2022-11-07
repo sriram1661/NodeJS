@@ -1,28 +1,20 @@
 module.exports = {
   apps : [{
-    name   : "app1",
-    script : "./app.js",
-    exec_mode : "fork",
-    // increment_var : "PORT",
-    env : {
-      "PORT" : "3000",
-      "NODE_ENV" : "production"
-    },
-    // watch : true,
-    // instances : 2,
-    // log_file: "/home/user/PM2/logs.log",
-    // time : true,
-    // cron_restart: "* * * * *"
+    script: 'index.js',
+    watch: '.'
+  }, {
+    script: './service-worker/',
+    watch: ['./service-worker']
   }],
+
   deploy : {
     production : {
-      "key"  : "/home/user/gti_key.pub",
-      "user" : "user",
-      "host" : ["127.0.0.1"],
-      "path" : "/home/user/PM2/deploy",
-      "ref"  : "origin/main",
-      "repo" : "git@github.com:sriram1661/NodeJS.git",
-      "post-deploy" : "npm install"
+      user : 'user',
+      host : '192.168.248.141',
+      ref  : 'origin/main',
+      repo : 'git@github.com/Surya5602/Basicnodeapp.git',
+      path : '/home/user/PM2/deploy',
+      "post-deploy" : "pm2 start index.js"
     }
   }
-}
+};
