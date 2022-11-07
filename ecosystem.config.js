@@ -16,7 +16,7 @@ module.exports = {
   }],
   deploy : {
     production : {
-      "key"  : "/home/user/gti_key",
+      "key"  : "/home/user/gti_key.pub",
       "user" : "user",
       "host" : ["127.0.0.1"],
       "path" : "/home/user/PM2/deploy",
